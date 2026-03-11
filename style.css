@@ -1,0 +1,61 @@
+/* Reset de margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Preto */
+  --preto-principal: #1E1E1E;
+  --preto-puro: #000000;
+  
+  /* Azul */
+  --azul-principal: #2563EB;
+  --azul-hover: #1D4ED8;
+  --azul-claro: #60A5FA;
+  
+  /* Cinza */
+  --cinza-grafite: #2D2D2D;
+  
+  /* Branco */
+  --off-white: #F9FAFB;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--preto-principal);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+  gap:calc(12px + 2vw);
+  list-style: none;
+  cursor: pointer;
+}
+
+.tema-btn {
+  background-image: ;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.nav-bar {
+  width: 100%;
+  position: fixed; 
+  top: 0;
+  padding: 1.2rem;
+  background-color: var(--cinza-grafite);
+}
