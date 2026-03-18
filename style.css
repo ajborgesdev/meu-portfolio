@@ -7,19 +7,19 @@
 
 :root {
   /* Preto */
-  --preto-principal: #1E1E1E;
+  --preto-principal: #1e1e1e;
   --preto-puro: #000000;
-  
+
   /* Azul */
-  --azul-principal: #2563EB;
-  --azul-hover: #1D4ED8;
-  --azul-claro: #60A5FA;
-  
+  --azul-principal: #2563eb;
+  --azul-hover: #1d4ed8;
+  --azul-claro: #60a5fa;
+
   /* Cinza */
-  --cinza-grafite: #2D2D2D;
-  
+  --cinza-grafite: #2d2d2d;
+
   /* Branco */
-  --off-white: #F9FAFB;
+  --off-white: #f9fafb;
 }
 
 /* Estilos gerais */
@@ -37,13 +37,16 @@ body {
 ul {
   display: flex;
   justify-content: end;
-  gap:calc(12px + 2vw);
+  gap: calc(12px + 2vw);
   list-style: none;
   cursor: pointer;
 }
 
 .tema-btn {
-  background-image: ;
+  height: 1.1rem;
+  background-color: var(--cinza-grafite);
+  border-style: none;
+  cursor: pointer;
 }
 
 .container {
@@ -54,8 +57,65 @@ ul {
 
 .nav-bar {
   width: 100%;
-  position: fixed; 
+  position: fixed;
   top: 0;
   padding: 1.2rem;
   background-color: var(--cinza-grafite);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+}
+
+.hero-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+.hero-img {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.hero-img img {
+  width: 65%;
+  border-radius: 50%;
+}
+
+.hero-circle{
+    position: absolute;
+    width: 93%;
+    transform: translate(3.8%, 4.8%);
+    z-index: 1;
+}
+
+.hero-circle img {
+  width: 100%;
+  animation: rotate 30s linear infinite;
+  opacity: 0.6;
+}
+
+.profile {
+  position: absolute;
+  width: 200px;
+  left: 50%;;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
