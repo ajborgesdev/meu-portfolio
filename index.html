@@ -5,33 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ana Julia Borges - Portfólio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imgs/logo-a-j.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="#home" class="linksInternos"></a>Home</li>
-            <li><a href="#projetos" class="linksInternos"></a>Projetos</li>
-            <li><a href="#sobre-mim" class="linksInternos"></a>Sobre mim</li>
-            <li><a href="#contato" class="linksInternos"></a>Contato</li>
-            <button class="tema-btn" id="js-btn">
-              <img src="imgs/sun.png" alt="icone sol" class="tema-btn" />
-            </button>
+    <header class="hero-nav">
+      <div class="container-nav">
+        <nav class="nav-bar js-menu">
+          <div class="logo-aj">
+            <img src="imgs/logo-a-j.svg" alt="logotipo" />
+          </div>
+          <div class="hamburguer" id="hamburguer">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#sobre-mim">Sobre mim</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+              <button class="tema-btn tema-desktop" id="js-btn-desktop">
+                <img src="imgs/sun.png" alt="icone sol" />
+              </button>
+            </li>
+            <li class="tema-btn tema-mobile" id="js-btn-mobile">
+              <button class="mobile-btn">Modo Claro
+                <img src="imgs/meia-lua-b.png" alt="Modo claro/escuro">
+              </button>
+            </li>
           </ul>
         </nav>
-      </header>
-      <header class="hero">
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
         <div class="hero-text">
-          <p><h1>Olá, mundo! Me chamo Ana Julia Borges</h1></p><br>
-          <p><h2>Eu sou</h2></p><br>
-          <p>Desde cedo sou fascinada pelo universo tecnológico, paixão essa que me trouxe ao encontro do desenvolvimento digital. Transformo ideias em códigos bem estruturados, construídos passo a passo com atenção aos detalhes, foco em soluções claras, eficientes e de alta qualidade.</p>
+          <h1>
+            Olá, mundo! Me chamo <br />
+            Ana Julia Borges
+          </h1>
+          <div class="rotating-text">
+            <div class="track">
+              <span>Desenvolvedora Front-End</span>
+              <span>UX/UI Designer</span>
+              <span>Criadora de Interfaces</span>
+              <span>Desenvolvedora Front-End</span>
+              <span>UX/UI Designer</span>
+              <span>Criadora de Interfaces</span>
+            </div>
+          </div>
+          <div class="hero-description">
+            <p>
+              Desde cedo sou fascinada pelo universo tecnológico, paixão essa
+              que me trouxe ao encontro do desenvolvimento digital. Transformo
+              ideias em códigos bem estruturados, construídos passo a passo com
+              atenção aos detalhes, foco em soluções claras, eficientes e de
+              alta qualidade.
+            </p>
+          </div>
         </div>
         <div class="hero-img">
-          <img src="imgs/hero-img.png" class="profile" alt="minha foto">
-          <div class="hero-circle"><img src="imgs/borda-img.png" alt="círculo de números binários"></div>
+          <img src="imgs/hero-img.png" class="profile" alt="minha foto" />
+          <div class="hero-circle">
+            <img src="imgs/borda-img.png" alt="círculo de números binários" />
+          </div>
         </div>
-      </header>
-    </div>
+        <a id="js-scroll" aria-label="Rolar para projetos" class="scroll-link">
+          <span class="scroll-arrow">
+            <img src="imgs/arrow-down.svg" alt="Seta para baixo" />
+          </span>
+        </a>
+      </section>
+
+      <section id="projetos" class="grid-section">
+        <h2>Projetos</h2>
+        <div class="carrossel-container">
+          <button class="carrossel-btn prev" id="prev-btn">
+            <img src="imgs/arrow-prev.svg" alt="Anterior" />
+          </button>
+          <div class="carrossel-wrapper">
+            <div class="carrossel-track" id="carrossel-track">
+              <a
+                href="https://ajborgesdev.github.io/animais-fantasticos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="projeto-card-link">
+                <div class="projeto-card">
+                  <img src="imgs/projeto1.jpg" alt="Animais Fantásticos" />
+                  <h3>Animais Fantásticos</h3>
+                  <p>
+                    Site desenvolvido como estudo durante o curso de Javascript
+                    pela Origamid
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://ajborgesdev.github.io/clima-tempo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="projeto-card-link">
+                <div class="projeto-card">
+                  <img src="imgs/projeto2.jpeg" alt="Climatempo" />
+                  <h3>Climatempo</h3>
+                  <p>
+                    Projeto com enfoque na utilização de APIs para obter
+                    informações climáticas
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://ajborgesdev.github.io/projeto-login/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="projeto-card-link">
+                <div class="projeto-card">
+                  <img src="imgs/projeto3.jpeg" alt="Tela de login" />
+                  <h3>Tela de login</h3>
+                  <p>Interface moderna e intuitiva para simulação de login</p>
+                </div>
+              </a>
+              <a
+                href="https://ajborgesdev.github.io/projeto-social/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="projeto-card-link">
+                <div class="projeto-card">
+                  <img src="imgs/projeto4.png" alt="Rede Social" />
+                  <h3>Rede Social</h3>
+                  <p>
+                    Página web interativa desenvolvida durante aulas do Curso em
+                    Vídeo
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://ajborgesdev.github.io/projeto-cordel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="projeto-card-link">
+                <div class="projeto-card">
+                  <img src="imgs/projeto5.jpg" alt="Cordel Moderno" />
+                  <h3>Cordel Moderno</h3>
+                  <p>
+                    Site de cordel desenvolvido durante o curso de HTML e CSS do
+                    Curso em Vídeo
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="carrossel-btn next" id="next-btn">
+            <img src="imgs/arrow-next.svg" alt="Próximo" />
+          </button>
+        </div>
+      </section>
+
+      <section id="sobre-mim" class="grid-section">
+        <h2>Sobre mim</h2>
+        <div class="sobre-texto">
+          <p>
+            Desenvolvedora Front-end especializada em
+            <span class="destaque">JavaScript, HTML5, CSS3 e Algoritmos</span>.
+          </p>
+          <p>
+            Focada numa construção objetiva de códigos limpos, cada projeto meu
+            é pensado para ser
+            <strong>escalável, reutilizável e de alto desempenho</strong>.
+          </p>
+          <p>
+            Como profissional e estudante, sou apaixonada por
+            <strong>aprendizagem constante</strong> e estou sempre buscando
+            agregar novas tecnologias ao meu portfólio.
+          </p>
+          <p class="frase-final">
+            💻 Transformo ideias em código com amor e atenção aos detalhes.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato" class="grid-section">
+        <h2>Contato</h2>
+        <div class="contato-texto">
+          <p>Vamos trabalhar juntos? Entre em contato comigo!</p>
+        </div>
+        <div class="contato-links">
+          <ul>
+            <li>
+              <a href="tel:67999686321" target="_blank"
+                >+55 67 999686321
+                <img src="imgs/telefone.png" alt="Telefone" />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:anajborges03@gmail.com" target="_blank"
+                >anajborges03@gmail.com
+                <img src="imgs/email.png" alt="Email" />
+              </a>
+            </li>
+            <li>
+              <img
+                class="linkedin-icon"
+                src="imgs/linkedin.png"
+                alt="Linkedin" />
+              <a
+                class="linkedin-link"
+                href="https://www.linkedin.com/in/ajborgesdev"
+                target="_blank"
+                >in/ajborgesdev
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-footer">
+        <p>
+          Feito com ❤️ por <a href="https://github.com/ajborgesdev">AJBorges</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
