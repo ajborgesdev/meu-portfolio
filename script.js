@@ -118,14 +118,13 @@ if (hamburguer && navMenu) {
   });
 
   // Fecha o menu ao clicar em um link
-  document.querySelectorAll('.nav-menu a').forEach(link => {
+  document.querySelectorAll('.nav-menu a').forEach((link) => {
     link.addEventListener('click', () => {
       hamburguer.classList.remove('active');
       navMenu.classList.remove('active');
     });
   });
-} 
-
+}
 
 // ========== TEMA CLARO/ESCURO ==========
 const themeBtnDesktop = document.getElementById('js-btn-desktop');
@@ -133,26 +132,32 @@ const themeBtnMobile = document.getElementById('js-btn-mobile');
 const html = document.documentElement;
 
 // Pega as imagens DENTRO dos botões
-const themeImgDesktop = themeBtnDesktop ? themeBtnDesktop.querySelector('img') : null;
-const themeImgMobile = themeBtnMobile ? themeBtnMobile.querySelector('img') : null;
+const themeImgDesktop = themeBtnDesktop
+  ? themeBtnDesktop.querySelector('img')
+  : null;
+const themeImgMobile = themeBtnMobile
+  ? themeBtnMobile.querySelector('img')
+  : null;
 
 // Função que alterna o tema
 function toggleTheme() {
   // Alterna a classe no HTML
   html.classList.toggle('light-mode');
-  
+
   const isLightMode = html.classList.contains('light-mode');
-  
+
   // Troca a imagem do botão DESKTOP
   if (themeImgDesktop) {
     themeImgDesktop.src = isLightMode ? 'imgs/moon.png' : 'imgs/sun.png';
   }
-  
+
   // Troca a imagem e texto do botão MOBILE
   if (themeImgMobile) {
-    themeImgMobile.src = isLightMode ? 'imgs/meia-lua-p.png' : 'imgs/meia-lua-b.png';
+    themeImgMobile.src = isLightMode
+      ? 'imgs/meia-lua-p.png'
+      : 'imgs/meia-lua-b.png';
   }
-  
+
   // Troca o texto do botão mobile
   const mobileBtn = document.querySelector('.mobile-btn');
   if (mobileBtn) {
@@ -161,7 +166,7 @@ function toggleTheme() {
       textNode.textContent = isLightMode ? ' Modo Escuro' : ' Modo Claro';
     }
   }
-  
+
   // Salva no localStorage
   localStorage.setItem('theme', isLightMode ? 'light-mode' : 'dark-mode');
 }
@@ -172,7 +177,7 @@ if (savedTheme === 'light-mode') {
   html.classList.add('light-mode');
   if (themeImgDesktop) themeImgDesktop.src = 'imgs/moon.png';
   if (themeImgMobile) themeImgMobile.src = 'imgs/meia-lua-p.png';
-  
+
   const mobileBtn = document.querySelector('.mobile-btn');
   if (mobileBtn) {
     const textNode = mobileBtn.childNodes[0];
@@ -191,3 +196,17 @@ if (themeBtnMobile) {
   themeBtnMobile.addEventListener('click', toggleTheme);
 }
 
+// Fechar o menu ao clicar fora dele
+
+document.addEventListener('click', function (event) {
+  if (navMenu.classList.contains('active')) {
+
+    const clicouForaMenu = !event.target.closest('.nav-menu');
+    const clicouForaHamburguer = !event.target.closest('.hamburguer');
+
+    if (clicouForaMenu && clicouForaHamburguer) {
+      navMenu.classList.remove('active');
+      hamburguer.classList.remove('active');
+    }
+  }
+});
