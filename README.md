@@ -1,2 +1,2 @@
 ## Portfólio 👩‍💻
-![preview]{preview/imgs/banner-readme.png}
+![preview](preview/banner-readme.png)
