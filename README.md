@@ -17,7 +17,6 @@ O Projeto Portfólio foi criado de forma independente utilizando das ferramentas
 - Eventos e Animações
 - localStorage
 
-## Execução 🚀
+## Acesse o site 🚀
 
-```bash
-git clone https://github.com/ajborgesdev/meu-portfolio.git
+[ajborgesdev.vercel.app](https://ajborgesdev.vercel.app)
